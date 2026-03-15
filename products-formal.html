@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_formal_title">正装皮鞋 & 商务休闲 - 铁狮丹尼</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="i18n.js"></script>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo.png" alt="铁狮丹尼" class="logo-image">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" data-i18n="nav_home">首页</a></li>
+                <li><a href="products.html" class="active" data-i18n="nav_products">产品中心</a></li>
+                <li><a href="services.html" data-i18n="nav_services">企业服务</a></li>
+                <li><a href="news.html" data-i18n="nav_news">最新资讯</a></li>
+                <li><a href="about.html" data-i18n="nav_about">关于我们</a></li>
+                <li><a href="contact.html" data-i18n="nav_contact">商务合作</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button class="icon-btn" aria-label="搜索" onclick="openSearchModal()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <button class="icon-btn" aria-label="联系我们">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                </button>
+                <div class="language-selector" id="languageSelector">
+                    <button class="language-selector-btn" onclick="toggleLanguageDropdown()" id="currentLang">
+                        <span>🇨🇳 简体中文</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title" data-i18n="formal_title">正装皮鞋</h1>
+            <p class="page-subtitle" data-i18n="formal_subtitle">牛津鞋 · 德比鞋 · 孟克鞋</p>
+        </div>
+    </section>
+
+    <!-- 产品画册展示 -->
+    <section class="products-section">
+        <div class="container">
+            <div class="product-gallery">
+                <!-- 第1行：大图展示 -->
+                <div class="gallery-row gallery-row-full">
+                    <div class="gallery-item gallery-item-large">
+                        <img src="01.jpg" alt="SPERONI品牌画册1" class="gallery-image">
+                    </div>
+                </div>
+                
+                <!-- 第2行：左右分栏 -->
+                <div class="gallery-row gallery-row-half">
+                    <div class="gallery-item">
+                        <img src="02.jpg" alt="SPERONI品牌画册2" class="gallery-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="03.jpg" alt="SPERONI品牌画册3" class="gallery-image">
+                    </div>
+                </div>
+                
+                <!-- 第3行：单图展示 -->
+                <div class="gallery-row gallery-row-full">
+                    <div class="gallery-item">
+                        <img src="04.jpg" alt="SPERONI品牌画册4" class="gallery-image">
+                    </div>
+                </div>
+                
+                <!-- 第4行：左右分栏 -->
+                <div class="gallery-row gallery-row-half">
+                    <div class="gallery-item">
+                        <img src="05.jpg" alt="SPERONI品牌画册5" class="gallery-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="06.jpg" alt="SPERONI品牌画册6" class="gallery-image">
+                    </div>
+                </div>
+                
+                <!-- 第5行：单图展示 -->
+                <div class="gallery-row gallery-row-full">
+                    <div class="gallery-item">
+                        <img src="07.jpg" alt="SPERONI品牌画册7" class="gallery-image">
+                    </div>
+                </div>
+                
+                <!-- 第6行：左右分栏 -->
+                <div class="gallery-row gallery-row-half">
+                    <div class="gallery-item">
+                        <img src="08.jpg" alt="SPERONI品牌画册8" class="gallery-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="09.jpg" alt="SPERONI品牌画册9" class="gallery-image">
+                    </div>
+                </div>
+                
+                <!-- 第7行：单图展示 -->
+                <div class="gallery-row gallery-row-full">
+                    <div class="gallery-item">
+                        <img src="10.jpg" alt="SPERONI品牌画册10" class="gallery-image">
+                    </div>
+                </div>
+                
+                <!-- 第8行：左右分栏 -->
+                <div class="gallery-row gallery-row-half">
+                    <div class="gallery-item">
+                        <img src="11.jpg" alt="SPERONI品牌画册11" class="gallery-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="12.jpg" alt="SPERONI品牌画册12" class="gallery-image">
+                    </div>
+                </div>
+                
+                <!-- 第9行：单图展示 -->
+                <div class="gallery-row gallery-row-full">
+                    <div class="gallery-item">
+                        <img src="13.jpg" alt="SPERONI品牌画册13" class="gallery-image">
+                    </div>
+                </div>
+                
+                <!-- 第10行：左右分栏 -->
+                <div class="gallery-row gallery-row-half">
+                    <div class="gallery-item">
+                        <img src="14.jpg" alt="SPERONI品牌画册14" class="gallery-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="15.jpg" alt="SPERONI品牌画册15" class="gallery-image">
+                    </div>
+                </div>
+                
+                <!-- 第11行：单图展示 -->
+                <div class="gallery-row gallery-row-full">
+                    <div class="gallery-item">
+                        <img src="16.jpg" alt="SPERONI品牌画册16" class="gallery-image">
+                    </div>
+                </div>
+                
+                <!-- 第12行：左右分栏 -->
+                <div class="gallery-row gallery-row-half">
+                    <div class="gallery-item">
+                        <img src="17.jpg" alt="SPERONI品牌画册17" class="gallery-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="18.jpg" alt="SPERONI品牌画册18" class="gallery-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 返回链接 -->
+    <section class="back-section">
+        <div class="container">
+            <a href="products.html" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                <span data-i18n="back_products">返回产品中心</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 定制服务提示 -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title" data-i18n="cta_title_products">需要定制产品？</h2>
+                <p class="cta-desc" data-i18n="cta_desc_products">我们支持OEM/ODM定制服务，来样定制、来图定制、品牌定制</p>
+                <a href="contact.html" class="btn btn-primary" data-i18n="cta_btn_products">联系我们</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 搜索模态框 -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-overlay" onclick="closeSearchModal()"></div>
+        <div class="search-container">
+            <button class="search-close" onclick="closeSearchModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="search-box">
+                <svg class="search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input type="text" id="searchInput" class="search-input" placeholder="搜索产品..." data-i18n-placeholder="search_placeholder" autocomplete="off">
+            </div>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>铁狮丹尼</h2>
+                    <p data-i18n="footer_brand">专业鞋履供应商 · 企业级解决方案</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4 data-i18n="footer_products">产品中心</h4>
+                        <a href="products-formal.html" data-i18n="footer_formal">正装鞋系列</a>
+                        <a href="products-business.html" data-i18n="footer_business">商务休闲</a>
+                        <a href="products-casual-shoes.html" data-i18n="footer_casual_shoes">休闲鞋</a>
+                    </div>
+                    <div class="link-group">
+                        <h4 data-i18n="footer_services">企业服务</h4>
+                        <a href="services.html" data-i18n="footer_oem">OEM定制</a>
+                        <a href="services.html" data-i18n="footer_odm">ODM设计</a>
+                        <a href="services.html" data-i18n="footer_logistics">仓储物流</a>
+                        <a href="services.html" data-i18n="footer_quality">质量保证</a>
+                    </div>
+                    <div class="link-group">
+                        <h4 data-i18n="footer_about">关于我们</h4>
+                        <a href="about.html" data-i18n="footer_company">公司介绍</a>
+                        <a href="about.html" data-i18n="footer_capacity">生产能力</a>
+                        <a href="about.html" data-i18n="footer_cases">合作案例</a>
+                        <a href="contact.html" data-i18n="footer_contact">联系方式</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer_copyright">&copy; 2026 铁狮丹尼. All rights reserved. 专业鞋履制造 · 期待与您合作</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 产品详情模态框 -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeProductModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="modal-body">
+                <div class="modal-shoe">
+                    <div class="modal-shoe-display"></div>
+                </div>
+                <div class="modal-details">
+                    <h2 id="modalTitle">产品名称</h2>
+                    <p id="modalDesc">产品描述</p>
+                    <p class="modal-price" id="modalPrice">批发价询价</p>
+                    <button class="btn btn-primary" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})" data-i18n="modal_contact">企业服务</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // 产品分类切换
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // 切换按钮状态
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                // 切换内容显示
+                const tabId = this.dataset.tab;
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

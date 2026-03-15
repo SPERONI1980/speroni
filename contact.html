@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_contact_title">商务合作 - 铁狮丹尼</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="i18n.js"></script>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo.png" alt="铁狮丹尼" class="logo-image">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" data-i18n="nav_home">首页</a></li>
+                <li><a href="products.html" data-i18n="nav_products">产品中心</a></li>
+                <li><a href="services.html" data-i18n="nav_services">企业服务</a></li>
+                <li><a href="news.html" data-i18n="nav_news">最新资讯</a></li>
+                <li><a href="about.html" data-i18n="nav_about">关于我们</a></li>
+                <li><a href="contact.html" class="active" data-i18n="nav_contact">商务合作</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button class="icon-btn" aria-label="搜索" onclick="openSearchModal()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <button class="icon-btn" aria-label="联系我们">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                </button>
+                <div class="language-selector" id="languageSelector">
+                    <button class="language-selector-btn" onclick="toggleLanguageDropdown()" id="currentLang">
+                        <span>🇨🇳 简体中文</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <section class="page-header page-header-image">
+        <div class="container">
+            <h1 class="page-title" data-i18n="section_contact">商务合作</h1>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">联系方式</h2>
+                <p class="section-subtitle">期待与您建立合作关系</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card-large">
+                    <div class="contact-icon">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <h3>商务电话</h3>
+                    <p class="contact-value">+86（020）36552999</p>
+                    <p class="contact-desc">周一至周五 9:00-18:00</p>
+                </div>
+                <div class="contact-card-large">
+                    <div class="contact-icon">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                            <path d="M22 6l-10 7L2 6"></path>
+                        </svg>
+                    </div>
+                    <h3>商务邮箱</h3>
+                    <p class="contact-value">tieshidanni@gmail.com</p>
+                    <p class="contact-desc">24小时内回复</p>
+                </div>
+                <div class="contact-card-large">
+                    <div class="contact-icon">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3>公司地址</h3>
+                    <p class="contact-value">中国广东省广州市越秀区站西路37号鸿运大厦东楼1310</p>
+                    <p class="contact-desc">欢迎实地考察</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合作优势 -->
+    <section class="advantage-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">合作优势</h2>
+                <p class="section-subtitle">选择我们 · 信赖我们 · 共同发展</p>
+            </div>
+            <div class="advantage-grid">
+                <div class="advantage-item">
+                    <div class="advantage-number">01</div>
+                    <h3>品质保证</h3>
+                    <p>严格的质量控制体系，从原材料到成品，每道工序都经过严格检验，确保产品质量稳定可靠。</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-number">02</div>
+                    <h3>价格优势</h3>
+                    <p>规模化生产降低了生产成本，我们能够为客户提供具有竞争力的价格，帮助客户降低采购成本。</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-number">03</div>
+                    <h3>交期保证</h3>
+                    <p>先进的生产设备和高效的生产管理，确保订单按时交付，满足客户的销售计划。</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-number">04</div>
+                    <h3>专业服务</h3>
+                    <p>专业的销售和客服团队，为客户提供一对一的服务，及时响应客户需求，解决客户问题。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合作流程 -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">合作流程</h2>
+                <p class="section-subtitle">简单高效 · 快速响应</p>
+            </div>
+            <div class="process-flow">
+                <div class="process-step-flow">
+                    <div class="step-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                    </div>
+                    <div class="step-info">
+                        <h3>需求沟通</h3>
+                        <p>客户提出需求，我们进行详细了解和评估</p>
+                    </div>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step-flow">
+                    <div class="step-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="step-info">
+                        <h3>方案报价</h3>
+                        <p>根据需求提供解决方案和报价</p>
+                    </div>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step-flow">
+                    <div class="step-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <div class="step-info">
+                        <h3>合同签订</h3>
+                        <p>双方确认合作细节，签订合同</p>
+                    </div>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step-flow">
+                    <div class="step-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <div class="step-info">
+                        <h3>生产发货</h3>
+                        <p>按照合同约定进行生产和发货</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 在线咨询 -->
+    <section class="consultation-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="section_consultation">在线咨询</h2>
+                <p class="section-subtitle" data-i18n="section_consultation_subtitle">填写下方信息，我们会尽快与您联系</p>
+            </div>
+            <div class="consultation-form">
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" data-i18n="form_company">公司名称 *</label>
+                            <input type="text" id="name" name="name" required placeholder="请输入公司名称" data-i18n-placeholder="form_company_placeholder">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact" data-i18n="form_contact">联系人 *</label>
+                            <input type="text" id="contact" name="contact" required placeholder="请输入联系人姓名" data-i18n-placeholder="form_contact_placeholder">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone" data-i18n="form_phone">联系电话 *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="请输入联系电话" data-i18n-placeholder="form_phone_placeholder">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="form_email">电子邮箱 *</label>
+                            <input type="email" id="email" name="email" required placeholder="请输入电子邮箱" data-i18n-placeholder="form_email_placeholder">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="service" data-i18n="form_service">合作类型</label>
+                            <select id="service" name="service">
+                                <option value="" data-i18n="form_service_select">请选择合作类型</option>
+                                <option value="oem" data-i18n="form_service_oem">OEM定制</option>
+                                <option value="odm" data-i18n="form_service_odm">ODM设计</option>
+                                <option value="wholesale" data-i18n="form_service_wholesale">批发采购</option>
+                                <option value="other" data-i18n="form_service_other">其他合作</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="quantity" data-i18n="form_quantity">预计数量</label>
+                            <select id="quantity" name="quantity">
+                                <option value="" data-i18n="form_quantity_select">请选择预计数量</option>
+                                <option value="small" data-i18n="form_quantity_small">100-500双</option>
+                                <option value="medium" data-i18n="form_quantity_medium">500-1000双</option>
+                                <option value="large" data-i18n="form_quantity_large">1000-5000双</option>
+                                <option value="xlarge" data-i18n="form_quantity_xlarge">5000双以上</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-i18n="form_message">需求描述 *</label>
+                        <textarea id="message" name="message" required rows="5" placeholder="请详细描述您的需求，如产品类型、数量、定制要求等" data-i18n-placeholder="form_message_placeholder"></textarea>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary" data-i18n="form_submit">提交咨询</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 搜索模态框 -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-overlay" onclick="closeSearchModal()"></div>
+        <div class="search-container">
+            <button class="search-close" onclick="closeSearchModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="search-box">
+                <svg class="search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input type="text" id="searchInput" class="search-input" placeholder="搜索产品..." data-i18n-placeholder="search_placeholder" autocomplete="off">
+            </div>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>铁狮丹尼</h2>
+                    <p data-i18n="footer_brand">专业鞋履供应商 · 企业级解决方案</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4 data-i18n="footer_products">产品中心</h4>
+                        <a href="products-formal.html" data-i18n="footer_formal">正装皮鞋</a>
+                        <a href="products-business.html" data-i18n="footer_business">商务休闲</a>
+                        <a href="products-casual-shoes.html" data-i18n="footer_casual_shoes">休闲鞋</a>
+                    </div>
+                    <div class="link-group">
+                        <h4 data-i18n="footer_services">企业服务</h4>
+                        <a href="services.html" data-i18n="footer_oem">OEM定制</a>
+                        <a href="services.html" data-i18n="footer_odm">ODM设计</a>
+                        <a href="services.html" data-i18n="footer_logistics">仓储物流</a>
+                        <a href="services.html" data-i18n="footer_quality">质量保证</a>
+                    </div>
+                    <div class="link-group">
+                        <h4 data-i18n="footer_about">关于我们</h4>
+                        <a href="about.html" data-i18n="footer_company">公司介绍</a>
+                        <a href="about.html" data-i18n="footer_capacity">生产能力</a>
+                        <a href="about.html" data-i18n="footer_cases">合作案例</a>
+                        <a href="contact.html" data-i18n="footer_contact">联系方式</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer_copyright">&copy; 2026 铁狮丹尼. All rights reserved. 专业鞋履制造 · 期待与您合作</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // 表单提交处理
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // 这里可以添加实际的表单提交逻辑
+            alert('感谢您的咨询！我们会尽快与您联系。');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

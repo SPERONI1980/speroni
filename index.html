@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_home_title">铁狮丹尼 - 企业级鞋履供应商</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo.png" alt="铁狮丹尼" class="logo-image">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active" data-i18n="nav_home">首页</a></li>
+                <li><a href="products.html" data-i18n="nav_products">产品中心</a></li>
+                <li><a href="services.html" data-i18n="nav_services">企业服务</a></li>
+                <li><a href="news.html" data-i18n="nav_news">最新资讯</a></li>
+                <li><a href="about.html" data-i18n="nav_about">关于我们</a></li>
+                <li><a href="contact.html" data-i18n="nav_contact">商务合作</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button class="icon-btn" aria-label="搜索" data-i18n-aria-label="aria_search" onclick="openSearchModal()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <button class="icon-btn" aria-label="联系我们" data-i18n-aria-label="aria_contact">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                </button>
+                <div class="language-selector" id="languageSelector">
+                    <button class="language-selector-btn" onclick="toggleLanguageDropdown()" id="currentLang">
+                        <span>🇨🇳 简体中文</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title" data-i18n="hero_title">专业鞋履供应<br>企业级解决方案</h1>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">为零售商、品牌方提供高品质鞋履OEM/ODM服务</p>
+                <div class="hero-buttons">
+                    <a href="products.html" class="btn btn-primary" data-i18n="hero_btn_products">查看产品</a>
+                    <a href="services.html" class="btn btn-secondary" data-i18n="hero_btn_contact">企业服务</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-carousel">
+                    <div class="carousel-slides">
+                        <!-- 门店展示图片1 - SPERONI店铺 -->
+                        <div class="carousel-slide active">
+                            <div class="carousel-image-wrapper">
+                                <img src="640-1.png" alt="SPERONI品牌门店" class="carousel-real-image">
+                            </div>
+                        </div>
+                        <!-- 产品展示图片2 - 鞋履陈列 -->
+                        <div class="carousel-slide">
+                            <div class="carousel-image-wrapper">
+                                <img src="640-2.png" alt="铁狮丹尼产品陈列" class="carousel-real-image">
+                            </div>
+                        </div>
+                        <!-- 门店展示图片3 - 铁狮丹尼控股集团 -->
+                        <div class="carousel-slide">
+                            <div class="carousel-image-wrapper">
+                                <img src="640.png" alt="铁狮丹尼控股集团门店" class="carousel-real-image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-dots">
+                        <span class="carousel-dot active" onclick="goToSlide(0)"></span>
+                        <span class="carousel-dot" onclick="goToSlide(1)"></span>
+                        <span class="carousel-dot" onclick="goToSlide(2)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品中心 -->
+    <section id="products" class="collection">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="section_products">产品系列</h2>
+                <p class="section-subtitle" data-i18n="section_products_subtitle">品类齐全 · 支持定制</p>
+            </div>
+            <div class="collection-grid">
+                <a href="products-formal.html" class="collection-card" data-category="formal">
+                    <div class="collection-image">
+                        <svg class="category-shoe" viewBox="0 0 300 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30 100 Q80 90 130 85 Q180 80 240 85 Q280 90 290 100 L285 120 Q260 125 220 122 Q160 118 120 125 Q70 130 30 122 Z" fill="#1a1a1a"/>
+                            <path d="M100 85 Q130 60 170 55 Q210 52 250 60 Q270 68 280 85" stroke="#D4AF37" stroke-width="3" fill="none"/>
+                            <path d="M150 55 Q170 50 200 53 Q230 57 250 60" stroke="#D4AF37" stroke-width="2" fill="none"/>
+                            <circle cx="220" cy="65" r="6" fill="#D4AF37"/>
+                            <circle cx="250" cy="72" r="4" fill="#D4AF37"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="formal_title">正装皮鞋</h3>
+                    <p data-i18n="formal_subtitle">牛津鞋 · 德比鞋 · 孟克鞋</p>
+                </a>
+                <a href="products-formal.html" class="collection-card" data-category="casual">
+                    <div class="collection-image">
+                        <svg class="category-shoe" viewBox="0 0 300 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25 105 Q70 95 120 92 Q170 88 230 95 Q270 102 285 108 L280 125 Q245 130 200 128 Q140 125 100 132 Q55 138 25 130 Z" fill="#4A3728"/>
+                            <ellipse cx="150" cy="98" rx="100" ry="20" fill="#3D2E22"/>
+                            <rect x="115" y="85" width="70" height="6" rx="3" fill="#D4AF37"/>
+                            <path d="M70 105 Q90 100 110 103" stroke="#D4AF37" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="casual_title">商务休闲</h3>
+                    <p data-i18n="casual_subtitle">乐福鞋 · 豆豆鞋 · 马衔扣</p>
+                </a>
+                <a href="products-casual-shoes.html" class="collection-card" data-category="casual-shoes">
+                    <div class="collection-image">
+                        <svg class="category-shoe" viewBox="0 0 300 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 110 Q60 100 110 95 Q160 90 220 98 Q260 105 280 115 L275 130 Q240 135 190 132 Q120 128 80 135 Q40 140 20 132 Z" fill="#2C3E50"/>
+                            <path d="M60 110 Q100 105 150 108 Q200 110 260 108" stroke="#E74C3C" stroke-width="4" fill="none"/>
+                            <circle cx="80" cy="115" r="10" fill="#FFF"/>
+                            <circle cx="80" cy="115" r="6" fill="#2C3E50"/>
+                            <circle cx="200" cy="115" r="10" fill="#FFF"/>
+                            <circle cx="200" cy="115" r="6" fill="#2C3E50"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="casual_shoes_title">休闲鞋</h3>
+                    <p data-i18n="casual_shoes_subtitle">运动休闲 · 帆布鞋 · 板鞋</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 企业服务 -->
+    <section id="services" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="section_services">企业服务</h2>
+                <p class="section-subtitle" data-i18n="section_services_subtitle">专业高效 · 全方位支持</p>
+            </div>
+            <div class="about-content">
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="service_oem_title">OEM定制生产</h3>
+                        <p data-i18n="service_oem_desc">根据客户需求，提供来样定制、来图定制服务，专业团队一对一跟进</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M2 12h5l3 9 4-17 3 9h5"></path>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="service_odm_title">ODM设计开发</h3>
+                        <p data-i18n="service_odm_desc">拥有专业设计团队，可提供从设计到生产的一站式解决方案</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="1" y="3" width="15" height="13"></rect>
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="service_logistics_title">全球物流支持</h3>
+                        <p data-i18n="service_logistics_desc">全球物流网络，覆盖主要国家和地区，快速响应国际订单需求</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="service_quality_title">质量保证体系</h3>
+                        <p data-i18n="service_quality_desc">意大利奢侈品质量标准，欧洲皮革协会认证标准，精湛工艺保证</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="craftsman-icon">
+                        <svg width="300" height="300" viewBox="0 0 300 300" fill="none">
+                            <circle cx="150" cy="150" r="140" stroke="#D4AF37" stroke-width="1" stroke-dasharray="5,5"/>
+                            <circle cx="150" cy="150" r="100" stroke="#D4AF37" stroke-width="2"/>
+                            <path d="M150 50 L150 80 M150 220 L150 250 M50 150 L80 150 M220 150 L250 150 M80 80 L100 100 M200 200 L220 220 M200 80 L220 100 M80 220 L100 200" stroke="#D4AF37" stroke-width="2"/>
+                            <text x="150" y="160" text-anchor="middle" fill="#D4AF37" font-size="24" font-family="Playfair Display">专业制造</text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2 class="about-title" data-i18n="about_title">关于我们</h2>
+                    <p class="about-desc" data-i18n="about_desc">铁狮丹尼(SPERONI)来自享誉世界的制鞋国度——意大利。传承百年的品牌精髓,坚持以最精美的设计创造超值的品质,以其卓尔不群的独特风格,深受欧洲广大成功男士的青睐。2019年被评为"中国奢侈品品牌"荣誉称号。</p>
+                    <p class="about-desc">自1980年作为个人奢侈品鞋类工作室创立,到2000年转化为公司经营,为B端和C端客户提供供货服务,历史悠久。铁狮丹尼在沿袭意大利鞋的高贵品质基础上,结合本土独特的人文背景,将风格演绎得更加精致、简约、流畅,深受高尚消费群体的推崇。</p>
+                    <p class="about-desc">作为奢侈品牌,铁狮丹尼在制鞋领域已经有接近百年的历史,而且多年来一直追求更高品质,将精致、高雅的风格演绎到极致。虽产品没有高端奢侈品那么丰富,但却更加的专业,将鞋子做到业界最好是它们的目标。铁狮丹尼的皮鞋非常好,因为生产人员的技艺是非常高超的,它会有非常特别的舒适度,能够将脚部保护得服服帖帖。</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-i18n="stat_1980">1980</span>
+                            <span class="stat-label" data-i18n="stat_1980_label">品牌创立</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-i18n="stat_2000">2000</span>
+                            <span class="stat-label" data-i18n="stat_2000_label">公司经营</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-i18n="stat_italy">IT</span>
+                            <span class="stat-label" data-i18n="stat_italy_label">品牌起源</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-i18n="stat_2019">2019</span>
+                            <span class="stat-label" data-i18n="stat_2019_label">奢侈品品牌</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 最新资讯 -->
+    <section id="news" class="news-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="section_news">最新资讯</h2>
+                <p class="section-subtitle" data-i18n="section_news_subtitle">行业动态 · 品牌资讯</p>
+            </div>
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-image">
+                        <div class="news-date">
+                            <span class="news-day">15</span>
+                            <span class="news-month">2026.03</span>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-tag" data-i18n="news_tag_brand">品牌动态</span>
+                        <h3 class="news-title">铁狮丹尼发布2026春夏新品系列</h3>
+                        <p class="news-desc">延续意大利传统工艺，结合现代时尚设计，为您带来更多优质鞋履选择。</p>
+                        <a href="news.html" class="news-link" data-i18n="news_read_more">阅读全文 →</a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image news-image-2">
+                        <div class="news-date">
+                            <span class="news-day">10</span>
+                            <span class="news-month">2026.03</span>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-tag" data-i18n="news_tag_industry">行业资讯</span>
+                        <h3 class="news-title">热烈庆祝铁狮丹尼获得"中国奢侈品品牌"认证</h3>
+                        <p class="news-desc">2019年被评为"中国奢侈品品牌"荣誉称号，品质值得信赖。</p>
+                        <a href="news.html" class="news-link" data-i18n="news_read_more">阅读全文 →</a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image news-image-3">
+                        <div class="news-date">
+                            <span class="news-day">05</span>
+                            <span class="news-month">2026.03</span>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-tag" data-i18n="news_tag_company">企业新闻</span>
+                        <h3 class="news-title">铁狮丹尼开启OEM/ODM定制服务新纪元</h3>
+                        <p class="news-desc">为客户提供从设计到生产的一站式解决方案，支持来样定制、来图定制。</p>
+                        <a href="news.html" class="news-link" data-i18n="news_read_more">阅读全文 →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 商务合作 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="section_contact">商务合作</h2>
+                <p class="section-subtitle" data-i18n="section_contact_subtitle">专业服务 · 期待合作</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="contact_phone">商务电话</h3>
+                    <p data-i18n="contact_phone_value">+86（020）36552999</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="contact_address">公司地址</h3>
+                    <p data-i18n="contact_address_value">中国广东省广州市越秀区站西路37号鸿运大厦东楼1310</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="contact_email">商务邮箱</h3>
+                    <p data-i18n="contact_email_value">tieshidanni@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 搜索模态框 -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-overlay" onclick="closeSearchModal()"></div>
+        <div class="search-container">
+            <button class="search-close" onclick="closeSearchModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="search-box">
+                <svg class="search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input type="text" id="searchInput" class="search-input" placeholder="搜索产品..." data-i18n-placeholder="search_placeholder" autocomplete="off">
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">
+                    <p data-i18n="search_hint">输入关键词搜索产品</p>
+                    <div class="search-tags">
+                        <span class="search-tag" onclick="quickSearch('正装')" data-i18n="search_tag_formal">正装</span>
+                        <span class="search-tag" onclick="quickSearch('商务')" data-i18n="search_tag_business">商务</span>
+                        <span class="search-tag" onclick="quickSearch('休闲')" data-i18n="search_tag_casual">休闲</span>
+                        <span class="search-tag" onclick="quickSearch('牛津')" data-i18n="search_tag_oxford">牛津</span>
+                        <span class="search-tag" onclick="quickSearch('乐福')" data-i18n="search_tag_loafer">乐福</span>
+                        <span class="search-tag" onclick="quickSearch('定制')" data-i18n="search_tag_custom">定制</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>铁狮丹尼</h2>
+                    <p data-i18n="footer_brand">专业鞋履供应商 · 企业级解决方案</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4 data-i18n="footer_products">产品中心</h4>
+                        <a href="products-formal.html" data-i18n="footer_formal">正装皮鞋</a>
+                        <a href="products-business.html" data-i18n="footer_business">商务休闲</a>
+                        <a href="products-casual-shoes.html" data-i18n="footer_casual_shoes">休闲鞋</a>
+                    </div>
+                    <div class="link-group">
+                        <h4 data-i18n="footer_services">企业服务</h4>
+                        <a href="news.html" data-i18n="nav_news">最新资讯</a>
+                        <a href="#services" data-i18n="footer_oem">OEM定制</a>
+                        <a href="#services" data-i18n="footer_odm">ODM设计</a>
+                        <a href="#services" data-i18n="footer_logistics">仓储物流</a>
+                        <a href="#services" data-i18n="footer_quality">质量保证</a>
+                    </div>
+                    <div class="link-group">
+                        <h4 data-i18n="footer_about">关于我们</h4>
+                        <a href="#about" data-i18n="footer_company">公司介绍</a>
+                        <a href="#about" data-i18n="footer_capacity">生产能力</a>
+                        <a href="#about" data-i18n="footer_cases">合作案例</a>
+                        <a href="#contact" data-i18n="footer_contact">联系方式</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer_copyright">&copy; 2026 铁狮丹尼. All rights reserved. 专业鞋履制造 · 期待与您合作</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 产品详情模态框 -->
+    <div class="modal" id="productModal">
+        <div class="modal-overlay" onclick="closeProductModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeProductModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <div class="modal-shoe-display"></div>
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalTitle" data-i18n="modal_title">产品名称</h2>
+                    <p id="modalDesc" class="modal-desc" data-i18n="about_desc">产品描述</p>
+                    <div class="modal-price" id="modalPrice" data-i18n="modal_price">批发价询价</div>
+                    <div class="modal-options">
+                        <div class="option-group">
+                            <h4 data-i18n="modal_moq">最小起订量</h4>
+                            <p class="moq-text" data-i18n="modal_moq_value">100双起订</p>
+                        </div>
+                        <div class="option-group">
+                            <h4 data-i18n="modal_custom">定制服务</h4>
+                            <p class="custom-text" data-i18n="modal_custom_value">支持来样定制、来图定制、品牌定制</p>
+                        </div>
+                    </div>
+                    <div class="modal-actions">
+                        <button class="btn btn-primary" onclick="document.querySelector('#services').scrollIntoView({behavior: 'smooth'})" data-i18n="modal_contact">企业服务</button>
+                        <button class="btn btn-secondary" onclick="closeProductModal()" data-i18n="modal_more">了解更多</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_services_title">企业服务 - 铁狮丹尼</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="i18n.js"></script>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo.png" alt="铁狮丹尼" class="logo-image">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" data-i18n="nav_home">首页</a></li>
+                <li><a href="products.html" data-i18n="nav_products">产品中心</a></li>
+                <li><a href="services.html" class="active" data-i18n="nav_services">企业服务</a></li>
+                <li><a href="news.html" data-i18n="nav_news">最新资讯</a></li>
+                <li><a href="about.html" data-i18n="nav_about">关于我们</a></li>
+                <li><a href="contact.html" data-i18n="nav_contact">商务合作</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button class="icon-btn" aria-label="搜索" onclick="openSearchModal()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <button class="icon-btn" aria-label="联系我们">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                </button>
+                <div class="language-selector" id="languageSelector">
+                    <button class="language-selector-btn" onclick="toggleLanguageDropdown()" id="currentLang">
+                        <span>🇨🇳 简体中文</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title" data-i18n="section_services">企业服务</h1>
+            <p class="page-subtitle" data-i18n="section_services_subtitle">专业高效 · 全方位支持</p>
+        </div>
+    </section>
+
+    <!-- OEM定制服务 -->
+    <section class="service-detail">
+        <div class="container">
+            <div class="service-detail-content">
+                <div class="service-detail-image">
+                    <div class="service-icon-large">
+                        <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="service-detail-text">
+                    <h2 class="service-detail-title">OEM定制生产</h2>
+                    <p class="service-detail-desc">根据客户需求，提供来样定制、来图定制服务。我们拥有先进的生产设备和专业的技术团队，能够快速响应客户的定制需求。</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>来样定制：客户提供的样品，我们进行精准复制生产</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>来图定制：客户提供设计图纸，我们实现生产</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>品牌定制：支持客户品牌logo的印制和包装定制</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>小批量生产：起订量100双，满足中小客户需求</span>
+                        </div>
+                    </div>
+                    <div class="service-process">
+                        <h3>服务流程</h3>
+                        <div class="process-steps">
+                            <div class="process-step">
+                                <span class="step-number">1</span>
+                                <span class="step-text">需求沟通</span>
+                            </div>
+                            <div class="process-step">
+                                <span class="step-number">2</span>
+                                <span class="step-text">样品确认</span>
+                            </div>
+                            <div class="process-step">
+                                <span class="step-number">3</span>
+                                <span class="step-text">合同签订</span>
+                            </div>
+                            <div class="process-step">
+                                <span class="step-number">4</span>
+                                <span class="step-text">生产发货</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ODM设计开发 -->
+    <section class="service-detail">
+        <div class="container">
+            <div class="service-detail-content reverse">
+                <div class="service-detail-image">
+                    <div class="service-icon-large">
+                        <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M2 12h5l3 9 4-17 3 9h5"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="service-detail-text">
+                    <h2 class="service-detail-title">ODM设计开发</h2>
+                    <p class="service-detail-desc">拥有专业的设计团队，可提供从设计到生产的一站式解决方案。我们的设计师紧跟国际流行趋势，为客户打造时尚、优质的鞋履产品。</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>潮流设计：专业设计师团队，紧跟国际流行趋势</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>3D建模：采用先进的3D建模技术，直观展示设计效果</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>打样服务：快速打样，7天内提供样品</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>知识产权保护：客户设计版权完全归属客户</span>
+                        </div>
+                    </div>
+                    <div class="service-process">
+                        <h3>服务流程</h3>
+                        <div class="process-steps">
+                            <div class="process-step">
+                                <span class="step-number">1</span>
+                                <span class="step-text">需求调研</span>
+                            </div>
+                            <div class="process-step">
+                                <span class="step-number">2</span>
+                                <span class="step-text">方案设计</span>
+                            </div>
+                            <div class="process-step">
+                                <span class="step-number">3</span>
+                                <span class="step-text">打样确认</span>
+                            </div>
+                            <div class="process-step">
+                                <span class="step-number">4</span>
+                                <span class="step-text">批量生产</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 全球物流支持 -->
+    <section class="service-detail">
+        <div class="container">
+            <div class="service-detail-content">
+                <div class="service-detail-image">
+                    <div class="service-icon-large">
+                        <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="service-detail-text">
+                    <h2 class="service-detail-title">全球物流支持</h2>
+                    <p class="service-detail-desc">专业的国际物流解决方案,覆盖全球100多个国家和地区。与DHL、FedEx、UPS等国际知名物流公司深度合作,提供安全、快捷、可追踪的全球配送服务。</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>全球配送:覆盖100+国家和地区,无偏远地区限制</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>国际专线:专属国际物流通道,通关效率提升30%</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>清关服务:专业清关团队,协助办理各国进出口手续</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>全程追踪:实时物流跟踪,掌握货物动态</span>
+                        </div>
+                    </div>
+                    <div class="service-data">
+                        <h3>物流网络</h3>
+                        <div class="data-grid">
+                            <div class="data-item">
+                                <span class="data-number">100+</span>
+                                <span class="data-label">覆盖国家</span>
+                            </div>
+                            <div class="data-item">
+                                <span class="data-number">7-15</span>
+                                <span class="data-label">配送天数</span>
+                            </div>
+                            <div class="data-item">
+                                <span class="data-number">99%</span>
+                                <span class="data-label">准时送达</span>
+                            </div>
+                            <div class="data-item">
+                                <span class="data-number">24/7</span>
+                                <span class="data-label">客户服务</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 质量保证体系 -->
+    <section class="service-detail">
+        <div class="container">
+            <div class="service-detail-content reverse">
+                <div class="service-detail-image">
+                    <div class="service-icon-large">
+                        <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="service-detail-text">
+                    <h2 class="service-detail-title">质量保证体系</h2>
+                    <p class="service-detail-desc">传承意大利奢侈品牌百年匠心，严格把控每一道生产工序。从原材料甄选到成品检验，我们坚持最高品质标准，为用户提供媲美意大利奢侈品的优质鞋履。</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>意大利工艺：传承百年意大利制鞋工艺，固特异工艺制作</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>优质皮革：精选意大利进口头层牛皮，经过360道工序精细处理</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>手工缝制：每双鞋由经验丰富的匠人手工缝制，确保细节完美</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>多重检验：从选料到成品，经过20+道质量检验关卡</span>
+                        </div>
+                    </div>
+                    <div class="service-cert">
+                        <h3>品质标准</h3>
+                        <div class="cert-list">
+                            <div class="cert-item">意大利奢侈品质量标准</div>
+                            <div class="cert-item">欧洲皮革协会认证标准</div>
+                            <div class="cert-item">国际奢侈品品牌供应商资格</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title" data-i18n="cta_title_services">需要我们的服务？</h2>
+                <p class="cta-desc" data-i18n="cta_desc_services">专业团队为您服务，期待与您合作</p>
+                <a href="contact.html" class="btn btn-primary" data-i18n="cta_btn_services">联系我们</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 搜索模态框 -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-overlay" onclick="closeSearchModal()"></div>
+        <div class="search-container">
+            <button class="search-close" onclick="closeSearchModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="search-box">
+                <svg class="search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input type="text" id="searchInput" class="search-input" placeholder="搜索产品..." data-i18n-placeholder="search_placeholder" autocomplete="off">
+            </div>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>铁狮丹尼</h2>
+                    <p data-i18n="footer_brand">专业鞋履供应商 · 企业级解决方案</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4 data-i18n="footer_products">产品中心</h4>
+                        <a href="products-formal.html" data-i18n="footer_formal">正装皮鞋</a>
+                        <a href="products-business.html" data-i18n="footer_business">商务休闲</a>
+                        <a href="products-casual-shoes.html" data-i18n="footer_casual_shoes">休闲鞋</a>
+                    </div>
+                    <div class="link-group">
+                        <h4 data-i18n="footer_services">企业服务</h4>
+                        <a href="services.html" data-i18n="footer_oem">OEM定制</a>
+                        <a href="services.html" data-i18n="footer_odm">ODM设计</a>
+                        <a href="services.html" data-i18n="footer_logistics">仓储物流</a>
+                        <a href="services.html" data-i18n="footer_quality">质量保证</a>
+                    </div>
+                    <div class="link-group">
+                        <h4 data-i18n="footer_about">关于我们</h4>
+                        <a href="about.html" data-i18n="footer_company">公司介绍</a>
+                        <a href="about.html" data-i18n="footer_capacity">生产能力</a>
+                        <a href="about.html" data-i18n="footer_cases">合作案例</a>
+                        <a href="contact.html" data-i18n="footer_contact">联系方式</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer_copyright">&copy; 2026 铁狮丹尼. All rights reserved. 专业鞋履制造 · 期待与您合作</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
